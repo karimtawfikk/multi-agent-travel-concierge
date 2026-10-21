@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:04be72ab5cac4da6d17727e84782752b6f86a576685fb3bef36fd73fc938d3b5",
+  "claims": [
+    {
+      "id": "claim_558b9c2e88b84b648693ef05cec1f41f",
+      "statement": "The project dependencies specify CrewAI, FastAPI, Uvicorn, Pydantic, python-dotenv, requests, and LiteLLM in requirements.txt.",
+      "evidence": [
+        {
+          "resource": "repo://requirements.txt#L1-L8",
+          "version": "repo-lines-v1:sha256:03d839de9641369d0099db9b8312fbf808f4058752b72d4c8121b30d24fe8417:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2NhM2JmNWIxMTRiMDBlOWNhYjdlMTBjY2M1MzY5OGJjMTZmODUzZmI3NmY2NTEwZDM3NTlkZDQxMGQzMTc4MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhiMWNhOGY5MjdjNzRkOGVkOTY1MDQzMTA0MDE4MDkwNzc4NTI1NzNhNDc5MTc0MTViN2JjNjBiYjRiYzU3ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1c6bae0405994793801f41c642654169",
+      "statement": "The platform requires API keys for Groq, NVIDIA NIM, OpenRouter, Serper, and Duffel configured in the environment.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L86-L93",
+          "version": "repo-lines-v1:sha256:cd1227363b1c5124c4b477770f967eef548b1bac6b0d0b2f5e1ca76f0062861c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdmY2QxNWQ1ZmRjYjUwZDlkY2I0NjRiNGY5Nzk2OTEyYTI1ZWZmMjUzY2NmOTgzNzc4ODk1ZGVjY2M4NDIyOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTk1YjFlMTQ1NTE4YTBiNTMxYTJmYTY1OTFhYWMyN2ZlODllZWMyZGQzYmNhNDRmNjk1ODU5YzMwM2ZjZTg1OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjQ1MWNlYjYyNWRkOWM3MzFlNzg5MjI2ZDc2ZWZhZjNhNjA1Nzg2YWVjZWFjOWJkMWMzZDJkMTYwYzE1YmZlNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e39f3be7b7ca43d3bd2f97bddabf6978",
+      "statement": "The headless runner run_cli.py executes the crew with destination, days, budget, style, and interests CLI parameters.",
+      "evidence": [
+        {
+          "resource": "repo://run_cli.py#L51-L60",
+          "version": "repo-lines-v1:sha256:aae6f260da675c678c1bb7162f7345f1dafd3d6da388b7426d6e5a360aa8dab6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1OWNlZDBjYmNkNzY0YTc0ZDAzN2ZjNTVkZmE1OWUzOWQ5ODUzZjE1Nzk1N2RlOWU4YzA5ZjNlY2FiYjlmYjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MzJhYzQ0MTFhYjBjZDg5YzhlY2Q5MDY4NTQ1NmY1NDMyYzliMjIxYWUzZmQ4OGY1MGEwYjQ3YzRmYTExNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI0NzdiY2NmODQ3ODM1NmE4YjMzY2RjMTFiYTM4N2E2NzE1NmI0OTcxMWVjN2QwZDE1NWYxZGVhZTM2NjlmYmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T08:47:15.875Z"
+  }
+}

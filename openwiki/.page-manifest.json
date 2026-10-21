@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/multi-agent-system.md": {
+      "pageVersion": "sha256:1e066bb8459cdc3757b63f5988533ba1f04c2bd3d186b1243ad5393ad65bc530",
+      "completedBy": "antigravity",
+      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12",
+      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
+      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8"
+    },
+    "/openwiki/architecture/tools-and-integrations.md": {
+      "pageVersion": "sha256:f82dc07cb2d5e38bf284350467b88e710f7213d426923934313176019b90cd9a",
+      "completedBy": "antigravity",
+      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12",
+      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
+      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8"
+    },
+    "/openwiki/frontend/ui-architecture.md": {
+      "pageVersion": "sha256:5cfa9c4a85da84a434167f1e2e99cf4226bb76c9df6d3165afcaf9f4493d03c7",
+      "completedBy": "antigravity",
+      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12",
+      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
+      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8"
+    },
+    "/openwiki/models/data-schemas.md": {
+      "pageVersion": "sha256:907d3c4ef8d022abaf2fef3bc2d618ef8843ab9175b97a4024a2798a25b39610",
+      "completedBy": "antigravity",
+      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12",
+      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
+      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:04be72ab5cac4da6d17727e84782752b6f86a576685fb3bef36fd73fc938d3b5",
+      "completedBy": "antigravity",
+      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12",
+      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
+      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8"
+    },
+    "/openwiki/workflows/itinerary-generation.md": {
+      "pageVersion": "sha256:90d278a5e3b33afc6a08d316b93855aa53f83190734d1929fbe05b7f8a6e7104",
+      "completedBy": "antigravity",
+      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12",
+      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
+      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8"
+    }
+  }
+}

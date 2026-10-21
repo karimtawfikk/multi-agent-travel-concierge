@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:1e066bb8459cdc3757b63f5988533ba1f04c2bd3d186b1243ad5393ad65bc530",
+  "claims": [
+    {
+      "id": "claim_d47cd635092d4b9e84315382c0b86a6f",
+      "statement": "The multi-agent crew executes in a sequential pipeline where flight search runs first to establish flight anchor times, followed by spatial blueprinting which generates a TripSpatialBlueprint Pydantic model.",
+      "evidence": [
+        {
+          "resource": "repo://src/crew.py#L216-L231",
+          "version": "repo-lines-v1:sha256:7f536ec8b0ef7230d9d33984265bd5e76c275dacf60f64ff5a3a0b7c3da229fb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ODJkZTAyNTEyMzRiZmM5N2Q1ZDM4NWE3NmVmYTMyNmQ3NmI5M2E5NTViN2Y2ZmU2MGEzMjg2NWUwOTU2YjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0ZWUwYTE5MDQyZmZlMTJlM2MxN2VmMGY2MmMxYjYzY2Y3Yjg4MzJmM2M0YzFmM2QyMjRmOGJmYWM4YzZlM2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhOTBjNWY1YWNjMzFmYzdhZTBjYjYyNGE1MDgxNTAzMzZjYTJiOTA3OGFmMTk5NGVmZjBhNzFkMjg0MmE4NmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_92d7c59111584a2f9bb30a75b8bb9d7d",
+      "statement": "The four domain scout tasks (stay scout, activity planner, food scout, and transit scout) consume the spatial blueprint task output as context to cluster recommendations within the designated base neighborhoods and daily districts.",
+      "evidence": [
+        {
+          "resource": "repo://src/crew.py#L233-L263",
+          "version": "repo-lines-v1:sha256:932ade54af1c39375c58bcd909f3bb1a412eff3e13a627009b19be86e38c0fbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MjUzYTYwY2JjMWRhNGQwMzExM2RiMWJiMWFmNjFhNTNjNWJiNzgwMTRmNGNmMDM5ZWFjMDNkNzAwZGY5ODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU3MWJmMzY4Y2VmMWI3NWRiOGYwMzM3ODRiZGIyNGI1Nzc1MTI4NGEzMTY0N2I1ZmNkNDBmZWZiM2UxOWY2NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkOTczZTBiZjhkMDUzYzZhM2MwZjdmMmQxMzc1MzA0Y2EwNjc2NTYxMzU1ZThlY2M3N2RmMTJhZTliN2MzYzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_076734d064e24ef597369e42a585de9c",
+      "statement": "The Budget Analyst task aggregates context from all four domain scouts to calculate itemized spending and validate financial feasibility against the target budget.",
+      "evidence": [
+        {
+          "resource": "repo://src/crew.py#L264-L276",
+          "version": "repo-lines-v1:sha256:fa05ffddffe09df5d7113ab49fb068ef380f06da29e698e50563d6da0edd147b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ODJkZTAyNTEyMzRiZmM5N2Q1ZDM4NWE3NmVmYTMyNmQ3NmI5M2E5NTViN2Y2ZmU2MGEzMjg2NWUwOTU2YjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkMmRhM2M4NDEwNmJiYWJkNGM1ZTdiYTdhZmY4ODU1NWUwNzdlNDNjODcyNzM5OTNlOWY4NGJiYTczNjdhZTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3OTY1YjA5Yzk5NTA4MDlkNmMyZTI4YzJmNTZlNzMyMThiZTlhZDAwMjRhMTRiMmZlZjM5OTRkNGY4MDg5ODEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c7d4d121a47b45c195af8f90fa373e9c",
+      "statement": "The Itinerary Compiler receives context from all upstream tasks and validates the final synthesized output strictly against the CompleteTripItinerary Pydantic model.",
+      "evidence": [
+        {
+          "resource": "repo://src/crew.py#L277-L291",
+          "version": "repo-lines-v1:sha256:3b301fd36a3cf28625e07e8debf58c23ad182fc7fa954ba449e8febce545698d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ODJkZTAyNTEyMzRiZmM5N2Q1ZDM4NWE3NmVmYTMyNmQ3NmI5M2E5NTViN2Y2ZmU2MGEzMjg2NWUwOTU2YjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhOWY4YzJiYzdhMTQxYTAyMmFmM2ZlYjhhYjUwMDhlYzI1NzU3ZWYyNGFjZDA0OWY1MDg5YTc0YjdjOWFlODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwMGU3NTQwYjg1YzhkYzAzZDYyYzlmYjk1ODRkYWI3ZjU4MmI1NzkwNmFkMjkwY2I4Nzk2NTU3MGIwZDM4ZTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2NTVjMGFjMzJiMzgwYjBhOWUzMTJmYjVlZmQ0ZDVhN2FlYTY5Y2YyZGNkOWMzMmE2Yjc4MjQwYmRkZDU3NmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_322f44199d4d49c4af799daddb96d6ab",
+      "statement": "The Flight Scout agent connects to the live Duffel Flight API using an MCP stdio server wrapper running in a Python subprocess.",
+      "evidence": [
+        {
+          "resource": "repo://src/crew.py#L62-L88",
+          "version": "repo-lines-v1:sha256:707db163960b71da950b3410ce66951129ca086e905a5492c6d4c843232e6631:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YmVkYzk5MDM3ZDhmYmU4NmQ5NGYzNDhlZDBhNzJiNmQzZTc2MmUxMDhjZmNiMjgyN2VjOTcwMmIzYTY4OWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0ZWUwYTE5MDQyZmZlMTJlM2MxN2VmMGY2MmMxYjYzY2Y3Yjg4MzJmM2M0YzFmM2QyMjRmOGJmYWM4YzZlM2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhZTFmMWRlMjFmM2IxYWNjN2Q5MzczMWFjYjkyM2FmNDYxMDUxMWQwZmE0ZTUxMzQ4Mzc1ZmYzZDg1OThhZGYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T08:47:15.875Z"
+  }
+}

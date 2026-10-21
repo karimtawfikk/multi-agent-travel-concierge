@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:907d3c4ef8d022abaf2fef3bc2d618ef8843ab9175b97a4024a2798a25b39610",
+  "claims": [
+    {
+      "id": "claim_3d29f7863acc45df90115d1b7163b97e",
+      "statement": "TripSpatialBlueprint is an intermediate Pydantic model produced by the Lead Architect containing recommended stay neighborhoods and DaySpatialAnchor items for each day.",
+      "evidence": [
+        {
+          "resource": "repo://src/models.py#L5-L16",
+          "version": "repo-lines-v1:sha256:0b45da22eadf22255824ad7a2999d5a49d374be5e3304e30af37f5527a10ea2d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3YzkxNmE0MGYyYjVlNWYxZGM5MTUxZDFhMGU5OTI0ZDdhYjM3OTA0NDkyM2M2MjgxYTAxOTQ1MjE0MGE3YTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMDM1ZmU1ZGFjOGEwM2Y2YWEyMTViN2Q5MzkwYzMwZjdhNDJkOTAzODU5MWJkNmViYmY3ZGU3ZjI1ZGU0MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4NmQ0Nzk2OWI2NjA2ZmM2YzVkODg1YjgwNjZmY2VjODFhNTA3NTZiODAzYTA1MjQxYTM2OTI3YjBmN2JlZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRkZTAxNTZiNWU2MGMyMjI0MTAyZGVmZDIzMWE1YTQ1MDI5OTE0MWFjYzA1MjczMzFhODc1YWQ3YTFkMzQ3N2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dc48aeaa4ca242d986b405cac57a1696",
+      "statement": "The CompleteTripItinerary model enforces structured fields for weather, flights, lodging stays, daily activity/dining plans, airport transfer guides, and an itemized BudgetSummary.",
+      "evidence": [
+        {
+          "resource": "repo://src/models.py#L106-L117",
+          "version": "repo-lines-v1:sha256:3b27651c3648bafc759cd9082a7f80c698250b8a54730183ba4f26b5dddce62b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiNzI1NjRjYWFjYzc5OWMxMjNjODNmNTg3MTgzODA5Y2M2ZDViZGQxYjVjZTFjMGE5ZmI1ZjhkYmJlZGY2ZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjYjFiZDY3NTA4YWM1YmYxNjBiYjY0Y2Y0NDk2NDg3ZTk2ODJkZmJmNmY3Y2ViYmI4Yzg2YmIyNTY0N2MyMWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiYTNmYWFhNjRmOTY2MmIyYTg1MzY2MDc4NDQ2NmZkNGU5NzU5NDYyMTIyMTAxOGRkYTQyZGNjNzZmNmZmOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_35ed0ec0803049aaad5f5fe989be0145",
+      "statement": "The ActivityItem schema requires time slots to be formatted in 12-hour AM/PM time windows, while DiningItem categorizes meals into Breakfast, Lunch, Dinner, or Snack/Cafe.",
+      "evidence": [
+        {
+          "resource": "repo://src/models.py#L19-L36",
+          "version": "repo-lines-v1:sha256:375fdec8c764401e2d0ede65b1382d2847df7298720673e973c49b82081c4b7d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4YjlkOWVkZDY5NmI0YzQ1ZWExNTM5NDY4OGNjZjFmMGExZTdmYmI1OTRkYmZkOWRkOWNhNTA1ZTc2YzI2NDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2OWMzNDNmYjYzMGU1YmM4ZmViMzUwNzVhYThjMjk0OTM2YmUwZmMyMGQ3MDVlNTMxYzAzYzY4ZmE4ODZiYmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5ZWY0MzA4ZWMwNzNlMTg4MzhhN2IzNDgxYTA4Yjg4MzAwNWM1ZjM2YjIyZjNjOTQwZDhjN2E2YjliYWIyYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVlZDcxNTdhYzU1MDUwOTc5YzkwNWY3NTBiZTk3NTI5ODEzZjMyMDU3MjM2ZmNmMDgzMTZkM2RhNGRiMzlhNTcifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T08:47:15.875Z"
+  }
+}

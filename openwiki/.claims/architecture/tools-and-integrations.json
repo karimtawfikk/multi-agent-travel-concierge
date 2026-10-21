@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f82dc07cb2d5e38bf284350467b88e710f7213d426923934313176019b90cd9a",
+  "claims": [
+    {
+      "id": "claim_82244bef260b40fba09dd5ab8983105c",
+      "statement": "The flights MCP wrapper intercepts outbound httpx requests to inject Duffel-Version: v2 headers and trims flight search results to a maximum of 5 offers sorted by fewest stops and price.",
+      "evidence": [
+        {
+          "resource": "repo://src/flights_mcp_wrapper.py#L11-L67",
+          "version": "repo-lines-v1:sha256:2a1253e48e5d2c83208a4d0c018ab75741e9fd87391013aeb0bb7c5c49b1dda4:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0NmU1Zjg3N2IxZTk4OWUxYmFjYTk5YzkyMmZhNzAzMjUwZmU5YWNlNDMyYmQzMDVhNDcwMGViMzc3MTg2YTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmMTY1NjRiYjQxZWMwOWY3NzE0OGIyMTRkNTFhZDIzYzhlYmI3OGIzZTRjZjFlMWNjMjk4Y2JhNDcwZTI0MmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkNzYxODVjZDc4OTM5MGI0MmVkZDM4YTRlMzQwMTU0MDgzYjk2OTgxNDM1N2ViZjM3NTBkNjBhMjg0YmY5N2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e74d8d8579644717a11fbbc38489e02e",
+      "statement": "The weather tool resolves destination coordinates using Open-Meteo geocoding and retrieves temperature ranges and precipitation probabilities without requiring an API key.",
+      "evidence": [
+        {
+          "resource": "repo://src/tools/weather_tool.py#L5-L55",
+          "version": "repo-lines-v1:sha256:9f3b111cc16c62bf280578e5704bb8387159d2ff122836656446722939887db1:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhNjkzNWI4YjM3MzFhMjA0MmMzOTk0ZmY0YmNjNDgzNGRmZDAxNjc2ZDRiNDBjNmNlNDY2OTllNTY0ZWY2OGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyOGI4MjNhMzZhNjFkNzNiMGRkOWFmY2ZjNzcyODA0NTY4NThjMWJlYzdiNmQ4ZmMwYmZlMGQ4YzI4YzBlNGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3MzkwZGExNjI2NDYwZGEyM2RkZTE3ZjA4YzY1MWNiOTNkN2NiM2MyYWUzOWZiMjY1ZWE4ZjU3YmYyZTczNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxNjg0ODQ1NzZiYjE0MjQ0ZmJiY2E3MmM0NTc3NzA2Y2ZiMWI4YjgzYmQ0YmI5NTBlNjhmOGU2NzM4YTNjYjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_02995c87a2cb4504b9fff99edbe271df",
+      "statement": "The transit estimator calculates Haversine distance and models walking, taxi, and metro travel times based on coordinates geocoded from Wikipedia and Open-Meteo.",
+      "evidence": [
+        {
+          "resource": "repo://src/tools/transit_estimator_tool.py#L6-L86",
+          "version": "repo-lines-v1:sha256:454ac7dd876306645d3561bd25078e8621bfcae128ed98db19c00b5304e1c382:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5ZGFlZmJkZmQzODU0ZTQ4ZWFjMjU0MmY1NDNiMWU5MzFhMTM0OTUzNTc4OWE2YWU0NWNlM2RkMWMyYzQwMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhOWY4YzJiYzdhMTQxYTAyMmFmM2ZlYjhhYjUwMDhlYzI1NzU3ZWYyNGFjZDA0OWY1MDg5YTc0YjdjOWFlODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3MzkwZGExNjI2NDYwZGEyM2RkZTE3ZjA4YzY1MWNiOTNkN2NiM2MyYWUzOWZiMjY1ZWE4ZjU3YmYyZTczNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZiMzUxN2JiY2JmOTBlZTU3YmJkZGZlMzY3ZDA2NzZhODZmYmE1YmFjZTRiODc3YzUzZDRmMGYwMWE5ZDg5NDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f17afc62588c4b03bed34ae0b094169c",
+      "statement": "The currency converter uses the public Frankfurter reference rate API to compute fiat currency exchanges without authentication.",
+      "evidence": [
+        {
+          "resource": "repo://src/tools/currency_tool.py#L5-L36",
+          "version": "repo-lines-v1:sha256:e90e5d1c1d087cda8cf6e9395e7063466fd338a0ed5bcc31fc3239d0417c37d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4ZGVlN2JiZGE2ZThhOWNiMTIwNWEyZDBkNThlYjVlNDAxYWY3ZTkyZWQ4YWVmYmRiYzFlN2NiZjJlOTk5MGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhOWY4YzJiYzdhMTQxYTAyMmFmM2ZlYjhhYjUwMDhlYzI1NzU3ZWYyNGFjZDA0OWY1MDg5YTc0YjdjOWFlODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3MzkwZGExNjI2NDYwZGEyM2RkZTE3ZjA4YzY1MWNiOTNkN2NiM2MyYWUzOWZiMjY1ZWE4ZjU3YmYyZTczNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T08:47:15.875Z"
+  }
+}

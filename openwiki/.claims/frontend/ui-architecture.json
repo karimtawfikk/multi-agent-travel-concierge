@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:5cfa9c4a85da84a434167f1e2e99cf4226bb76c9df6d3165afcaf9f4493d03c7",
+  "claims": [
+    {
+      "id": "claim_804893ba76104a6c98b5a0d60970d4c8",
+      "statement": "The frontend manages a tri-state view flow (intro, execution, results) switching between form configuration, live agent execution tracking, and rendered itinerary views.",
+      "evidence": [
+        {
+          "resource": "repo://frontend/src/App.jsx#L48-L120",
+          "version": "repo-lines-v1:sha256:f522172d396a12c84e8d103c375e3887c42b34be3503c118fa1920cde36b79ab:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MTNiNmUzYWIxNmFiMTAzZDJkOWNkOTVlYTEyZTY5YmZhMDEwOWM4ZWEyOGU3ODVkYmE4YWM3ZTk2MmE0YmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlOWY2MzMyYjMyOTI5YzE1NDJhODE0MGVmM2QyN2M3NWNlZDZkZGRjMDc4MjU3NWQxNDdjOTg1NTc0ZjYzZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmYzFlMGZkYzU3MGU1ZGJiNWRkYjBkYTFjYjIxZWJhMDBlMzIwOGNhZTE1MWNjYzJmN2I0YTVjNjNhZWMwYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3Y2IwNjIxODAyZWFjMTQzYWVjZWFjMGFjNDU5NzEzMWM0ZWYzZWQ0MGQ4MjY5ZjZlYWZlZjFjYzIzNzhmNmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3aa92aae46dd408ab19472bbb0a8b1fe",
+      "statement": "The application consumes Server-Sent Events from /api/plan-trip-stream using the Fetch Streams API and a ReadableStream reader to update live agent status and logs in real-time.",
+      "evidence": [
+        {
+          "resource": "repo://frontend/src/App.jsx#L123-L185",
+          "version": "repo-lines-v1:sha256:28b55205c6a720c783551f49fc08bffb7609b5be01ebca84c7cc5201b73bb307:eyJzZWxlY3RlZExpbmVDb3VudCI6NjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyMzQ1MThkNTQxZmNhZWRmZDg1YmM2NTgzNDRiMmRmYWM1ZmMxNThlMWFjMzU2YjQ1ODNkMjAwOTk4MjFhMzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViYTZiMzBjOTg1ZDcyMjI1MjRiNTYwMzEwMWYxNTQ4MTE1NTI3NDZmYjcwZmNmOTU1MzkxMGVjN2MxZDdhOGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkNzI4NTczOGIzNWFkNzA4Njk4YWEzMDFlOTJhN2I3M2ExOTJjZTNmY2IyOTlhODM5MTUxN2IzZjRjMzEyMTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0YWQzMDlmMmJjMzljOGU1YTkwOWYyZmEzMWE5MDI2YjE5Njk4ODE0OGIxYTgxNmU2MjI1NGQyMzNiODVhNTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_855c38ff053d43e7b930e909240b9dc5",
+      "statement": "The frontend provides a sample loader that fetches a static preview from /api/sample-itinerary to test UI rendering without invoking backend agent models.",
+      "evidence": [
+        {
+          "resource": "repo://frontend/src/App.jsx#L58-L90",
+          "version": "repo-lines-v1:sha256:a89c1c275486c332266dc273b4eeb1f9b548e80b8e9e7e00e7efbcd6dd784970:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YWU3MWMyZDVmM2FmNjU3MTQyNGNmYTZlNTFlNTcwODA2YWQ5YmRkOTcwZDA1NjRhNDk4MWFlNDA3ZTEzMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzZmI5M2VjY2ZhYzExNmZjN2Q4OGQ3OTk1ZGRkOTJiOTdiMmEyZDQ5YjMxZDM5NmU2ZWEyYjFhZmFlOGQ4MGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4MjcxMmU1YzBhMDllZTZhZTJmMGJmMmFmMTEzOTdmZTk3MWQ2Y2JjODEyZDQxNDA2MTFkYjY4NTE5NjllNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiMjk0ZWM0MzMyOTM5YjVlZDAyYjg5MjA3OTNlMGU4NDcwODNlNmM4Y2EwNmI2MzA2NGFhYWMyMjBiZGQwYzAifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T08:47:15.875Z"
+  }
+}
