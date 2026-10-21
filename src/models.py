@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 
 class DaySpatialAnchor(BaseModel):
     day_number: int = Field(..., description="Day number (1, 2, 3...)")
-    theme: str = Field(..., description="E.g., 'Historic Kyoto & Gion Districts'")
+    theme: str = Field(..., description="E.g., 'Ancient Wonders & Giza Plateau'")
     district_focus: str = Field(..., description="Primary geographic district/neighborhood for this day, e.g., 'Giza Plateau & Al Haram'")
     strategic_rationale: str = Field(..., description="Brief rationale for clustering activities in this area")
 
