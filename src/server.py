@@ -1,3 +1,4 @@
+
 import os
 import sys
 import json
@@ -14,7 +15,7 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from crewai.events import (
@@ -829,6 +830,164 @@ def get_sample_itinerary():
         },
         airport_transfer_guide="From Kansai International Airport (KIX), board the JR Haruka Limited Express (approx. 75 minutes direct to Kyoto Station, reserved seat ~3,600 JPY). From Itami Airport (ITM), take the direct airport limousine bus (50 minutes, ~1,340 JPY).",
         general_transit_tips="Kyoto is best navigated via JR and Keihan train lines combined with walking. Avoid city buses during peak afternoon traffic on Shijo street.",
+    )
+
+
+def generate_ics_calendar(itinerary: CompleteTripItinerary) -> str:
+    """
+    Generates an RFC 5545 compliant iCalendar (.ics) string from a CompleteTripItinerary.
+    """
+    now = datetime.utcnow()
+    dt_stamp = now.strftime("%Y%m%dT%H%M%SZ")
+
+    start_date = None
+    if itinerary.flights and itinerary.flights.departure_date:
+        try:
+            start_date = datetime.strptime(itinerary.flights.departure_date.strip(), "%Y-%m-%d")
+        except Exception:
+            pass
+    if not start_date:
+        start_date = now + timedelta(days=14)
+
+    cal_name = itinerary.trip_title or f"{itinerary.destination} Itinerary"
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//TravelConcierge AI//Multi-Agent Travel Planner//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        f"X-WR-CALNAME:{cal_name}",
+        "X-WR-TIMEZONE:UTC",
+    ]
+
+    def escape_text(text: str) -> str:
+        if not text:
+            return ""
+        return (
+            str(text)
+            .replace("\\", "\\\\")
+            .replace(";", "\\;")
+            .replace(",", "\\,")
+            .replace("\r\n", "\\n")
+            .replace("\n", "\\n")
+        )
+
+    # 1. Flight Events
+    if itinerary.flights and itinerary.flights.options:
+        top_flight = itinerary.flights.options[0]
+        if top_flight.outbound:
+            f_start = start_date.replace(hour=10, minute=0, second=0)
+            f_end = start_date.replace(hour=14, minute=0, second=0)
+            desc = f"Airline: {top_flight.airline}\nCabin: {top_flight.cabin_class}\nFare: {top_flight.total_price}"
+            flight_summary = f"✈️ Flight to {itinerary.destination}: {top_flight.airline}"
+            lines.extend([
+                "BEGIN:VEVENT",
+                f"UID:flight-out-{int(now.timestamp())}@travelconcierge.ai",
+                f"DTSTAMP:{dt_stamp}",
+                f"DTSTART:{f_start.strftime('%Y%m%dT%H%M%S')}",
+                f"DTEND:{f_end.strftime('%Y%m%dT%H%M%S')}",
+                f"SUMMARY:{escape_text(flight_summary)}",
+                f"DESCRIPTION:{escape_text(desc)}",
+                f"LOCATION:{escape_text(itinerary.flights.origin or 'Airport')}",
+                "STATUS:CONFIRMED",
+                "END:VEVENT",
+            ])
+
+    # 2. Stay Event
+    if itinerary.top_stays:
+        stay = itinerary.top_stays[0]
+        s_start = start_date.replace(hour=15, minute=0, second=0)
+        s_end = (start_date + timedelta(days=itinerary.duration_days)).replace(hour=11, minute=0, second=0)
+        desc = f"Hotel: {stay.name}\nNeighborhood: {stay.neighborhood}\nTier: {stay.tier}\nWhy: {stay.why_recommended}"
+        stay_summary = f"🏨 Stay: {stay.name} ({stay.neighborhood})"
+        lines.extend([
+            "BEGIN:VEVENT",
+            f"UID:stay-{int(now.timestamp())}@travelconcierge.ai",
+            f"DTSTAMP:{dt_stamp}",
+            f"DTSTART:{s_start.strftime('%Y%m%dT%H%M%S')}",
+            f"DTEND:{s_end.strftime('%Y%m%dT%H%M%S')}",
+            f"SUMMARY:{escape_text(stay_summary)}",
+            f"DESCRIPTION:{escape_text(desc)}",
+            f"LOCATION:{escape_text(stay.name + ', ' + stay.neighborhood + ', ' + itinerary.destination)}",
+            "STATUS:CONFIRMED",
+            "END:VEVENT",
+        ])
+
+    # 3. Daily Activities & Dining
+    for day_idx, dp in enumerate(itinerary.day_plans):
+        day_date = start_date + timedelta(days=day_idx)
+        next_day = day_date + timedelta(days=1)
+        day_summary = f"📅 Day {dp.day_number}: {dp.theme} [{dp.neighborhood_focus}]"
+        day_desc = f"Theme: {dp.theme}\nDistrict: {dp.neighborhood_focus}\nTransit: {dp.transit_notes}"
+        lines.extend([
+            "BEGIN:VEVENT",
+            f"UID:day-{dp.day_number}-theme-{int(now.timestamp())}@travelconcierge.ai",
+            f"DTSTAMP:{dt_stamp}",
+            f"DTSTART;VALUE=DATE:{day_date.strftime('%Y%m%d')}",
+            f"DTEND;VALUE=DATE:{next_day.strftime('%Y%m%d')}",
+            f"SUMMARY:{escape_text(day_summary)}",
+            f"DESCRIPTION:{escape_text(day_desc)}",
+            f"LOCATION:{escape_text(dp.neighborhood_focus + ', ' + itinerary.destination)}",
+            "STATUS:CONFIRMED",
+            "END:VEVENT",
+        ])
+
+        for a_idx, act in enumerate(dp.activities):
+            a_start = day_date.replace(hour=min(23, 9 + a_idx * 3), minute=0, second=0)
+            a_end = day_date.replace(hour=min(23, 11 + a_idx * 3), minute=0, second=0)
+            desc = f"{act.description}\nCost: {act.cost_estimate}\nBooking: {act.booking_tips or 'None'}"
+            act_summary = f"🎯 {act.title}"
+            lines.extend([
+                "BEGIN:VEVENT",
+                f"UID:day-{dp.day_number}-act-{a_idx}-{int(now.timestamp())}@travelconcierge.ai",
+                f"DTSTAMP:{dt_stamp}",
+                f"DTSTART:{a_start.strftime('%Y%m%dT%H%M%S')}",
+                f"DTEND:{a_end.strftime('%Y%m%dT%H%M%S')}",
+                f"SUMMARY:{escape_text(act_summary)}",
+                f"DESCRIPTION:{escape_text(desc)}",
+                f"LOCATION:{escape_text(act.location_name + ', ' + itinerary.destination)}",
+                "STATUS:CONFIRMED",
+                "END:VEVENT",
+            ])
+
+        for d_idx, din in enumerate(dp.dining):
+            d_hour = 8 if "breakfast" in din.meal_type.lower() else (12 if "lunch" in din.meal_type.lower() else 19)
+            d_start = day_date.replace(hour=d_hour, minute=30, second=0)
+            d_end = day_date.replace(hour=d_hour + 1, minute=30, second=0)
+            desc = f"{din.description}\nCuisine: {din.cuisine}\nMust-try: {din.must_try_dish}\nPrice: {din.price_level}"
+            din_summary = f"🍽️ {din.meal_type}: {din.name} ({din.cuisine})"
+            lines.extend([
+                "BEGIN:VEVENT",
+                f"UID:day-{dp.day_number}-din-{d_idx}-{int(now.timestamp())}@travelconcierge.ai",
+                f"DTSTAMP:{dt_stamp}",
+                f"DTSTART:{d_start.strftime('%Y%m%dT%H%M%S')}",
+                f"DTEND:{d_end.strftime('%Y%m%dT%H%M%S')}",
+                f"SUMMARY:{escape_text(din_summary)}",
+                f"DESCRIPTION:{escape_text(desc)}",
+                f"LOCATION:{escape_text(din.location_name + ', ' + itinerary.destination)}",
+                "STATUS:CONFIRMED",
+                "END:VEVENT",
+            ])
+
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(lines)
+
+
+@app.post("/api/export-ics")
+def export_ics(itinerary: CompleteTripItinerary):
+    """
+    Export a CompleteTripItinerary as an RFC 5545 iCalendar (.ics) attachment.
+    """
+    ics_content = generate_ics_calendar(itinerary)
+    safe_destination = re.sub(r"[^a-zA-Z0-9]+", "-", itinerary.destination).strip("-").lower()
+    filename = f"{safe_destination}-itinerary.ics"
+    return Response(
+        content=ics_content,
+        media_type="text/calendar",
+        headers={
+            "Content-Disposition": f'attachment; filename="{filename}"',
+            "Cache-Control": "no-cache",
+        },
     )
 
 

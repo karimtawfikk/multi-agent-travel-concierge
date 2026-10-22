@@ -16,11 +16,11 @@
       "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12"
     },
     "/openwiki/frontend/ui-architecture.md": {
-      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
-      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8",
-      "pageVersion": "sha256:5cfa9c4a85da84a434167f1e2e99cf4226bb76c9df6d3165afcaf9f4493d03c7",
+      "pageVersion": "sha256:f2a62e388d04f1f54c8f26c023a74d83e1b192089b99b0136a97b81ef0190336",
       "completedBy": "antigravity",
-      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12"
+      "completedRunId": "fd09dbb2-570a-4e62-8528-2c68d77373f8",
+      "gitHead": "2d66185bff9ed32f3fbf2e8176d0b30997c797cb",
+      "sourceFingerprint": "sha256:00de5c6967890330154710b182b540a2d0ff9f9a672244eeaf0914eed4b5cc18"
     },
     "/openwiki/models/data-schemas.md": {
       "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
@@ -37,11 +37,11 @@
       "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12"
     },
     "/openwiki/workflows/itinerary-generation.md": {
-      "gitHead": "5e0bb16058eb29641e4bb8746958470881105606",
-      "sourceFingerprint": "sha256:0dab5dc7566051f39c0499eec21ade7f1cf4a1dbd40aada99769ea8ba274c0b8",
-      "pageVersion": "sha256:90d278a5e3b33afc6a08d316b93855aa53f83190734d1929fbe05b7f8a6e7104",
+      "pageVersion": "sha256:a9fb0d45749caab86d384d297f9b0ea5916e98cb9279cc96b4c99063dad7b40e",
       "completedBy": "antigravity",
-      "completedRunId": "3b3b54e9-5033-40c6-b22a-b0a8e8cdea12"
+      "completedRunId": "fd09dbb2-570a-4e62-8528-2c68d77373f8",
+      "gitHead": "2d66185bff9ed32f3fbf2e8176d0b30997c797cb",
+      "sourceFingerprint": "sha256:00de5c6967890330154710b182b540a2d0ff9f9a672244eeaf0914eed4b5cc18"
     }
   }
 }

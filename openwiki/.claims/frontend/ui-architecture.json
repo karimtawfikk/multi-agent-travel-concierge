@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:5cfa9c4a85da84a434167f1e2e99cf4226bb76c9df6d3165afcaf9f4493d03c7",
+  "pageVersion": "sha256:f2a62e388d04f1f54c8f26c023a74d83e1b192089b99b0136a97b81ef0190336",
   "claims": [
     {
       "id": "claim_804893ba76104a6c98b5a0d60970d4c8",
       "statement": "The frontend manages a tri-state view flow (intro, execution, results) switching between form configuration, live agent execution tracking, and rendered itinerary views.",
       "evidence": [
         {
-          "resource": "repo://frontend/src/App.jsx#L48-L120",
-          "version": "repo-lines-v1:sha256:f522172d396a12c84e8d103c375e3887c42b34be3503c118fa1920cde36b79ab:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MTNiNmUzYWIxNmFiMTAzZDJkOWNkOTVlYTEyZTY5YmZhMDEwOWM4ZWEyOGU3ODVkYmE4YWM3ZTk2MmE0YmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlOWY2MzMyYjMyOTI5YzE1NDJhODE0MGVmM2QyN2M3NWNlZDZkZGRjMDc4MjU3NWQxNDdjOTg1NTc0ZjYzZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmYzFlMGZkYzU3MGU1ZGJiNWRkYjBkYTFjYjIxZWJhMDBlMzIwOGNhZTE1MWNjYzJmN2I0YTVjNjNhZWMwYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3Y2IwNjIxODAyZWFjMTQzYWVjZWFjMGFjNDU5NzEzMWM0ZWYzZWQ0MGQ4MjY5ZjZlYWZlZjFjYzIzNzhmNmMifQ"
+          "resource": "repo://frontend/src/App.jsx#L53-L125",
+          "version": "repo-lines-v1:sha256:a5c385bc94adf0d3b1543fe7b44a981c8627926fb513f72815f23b0aabda602d:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MTNiNmUzYWIxNmFiMTAzZDJkOWNkOTVlYTEyZTY5YmZhMDEwOWM4ZWEyOGU3ODVkYmE4YWM3ZTk2MmE0YmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyNzJmYzEzNjhhZjAwYWUyZmMyMTBjMGI0ZWI5NjY5OGYyYzIxZWExN2VjYzMxYzU5Y2QzY2NlZjcwMWQxMWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmYzFlMGZkYzU3MGU1ZGJiNWRkYjBkYTFjYjIxZWJhMDBlMzIwOGNhZTE1MWNjYzJmN2I0YTVjNjNhZWMwYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNzI4NTczOGIzNWFkNzA4Njk4YWEzMDFlOTJhN2I3M2ExOTJjZTNmY2IyOTlhODM5MTUxN2IzZjRjMzEyMTcifQ"
         }
       ]
     },
@@ -17,7 +17,7 @@
       "statement": "The application consumes Server-Sent Events from /api/plan-trip-stream using the Fetch Streams API and a ReadableStream reader to update live agent status and logs in real-time.",
       "evidence": [
         {
-          "resource": "repo://frontend/src/App.jsx#L123-L185",
+          "resource": "repo://frontend/src/App.jsx#L129-L191",
           "version": "repo-lines-v1:sha256:28b55205c6a720c783551f49fc08bffb7609b5be01ebca84c7cc5201b73bb307:eyJzZWxlY3RlZExpbmVDb3VudCI6NjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyMzQ1MThkNTQxZmNhZWRmZDg1YmM2NTgzNDRiMmRmYWM1ZmMxNThlMWFjMzU2YjQ1ODNkMjAwOTk4MjFhMzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViYTZiMzBjOTg1ZDcyMjI1MjRiNTYwMzEwMWYxNTQ4MTE1NTI3NDZmYjcwZmNmOTU1MzkxMGVjN2MxZDdhOGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkNzI4NTczOGIzNWFkNzA4Njk4YWEzMDFlOTJhN2I3M2ExOTJjZTNmY2IyOTlhODM5MTUxN2IzZjRjMzEyMTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0YWQzMDlmMmJjMzljOGU1YTkwOWYyZmEzMWE5MDI2YjE5Njk4ODE0OGIxYTgxNmU2MjI1NGQyMzNiODVhNTIifQ"
         }
       ]
@@ -27,14 +27,32 @@
       "statement": "The frontend provides a sample loader that fetches a static preview from /api/sample-itinerary to test UI rendering without invoking backend agent models.",
       "evidence": [
         {
-          "resource": "repo://frontend/src/App.jsx#L58-L90",
+          "resource": "repo://frontend/src/App.jsx#L64-L96",
           "version": "repo-lines-v1:sha256:a89c1c275486c332266dc273b4eeb1f9b548e80b8e9e7e00e7efbcd6dd784970:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YWU3MWMyZDVmM2FmNjU3MTQyNGNmYTZlNTFlNTcwODA2YWQ5YmRkOTcwZDA1NjRhNDk4MWFlNDA3ZTEzMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzZmI5M2VjY2ZhYzExNmZjN2Q4OGQ3OTk1ZGRkOTJiOTdiMmEyZDQ5YjMxZDM5NmU2ZWEyYjFhZmFlOGQ4MGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4MjcxMmU1YzBhMDllZTZhZTJmMGJmMmFmMTEzOTdmZTk3MWQ2Y2JjODEyZDQxNDA2MTFkYjY4NTE5NjllNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiMjk0ZWM0MzMyOTM5YjVlZDAyYjg5MjA3OTNlMGU4NDcwODNlNmM4Y2EwNmI2MzA2NGFhYWMyMjBiZGQwYzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8c651e62776848d79a6467c074eeac20",
+      "statement": "The frontend provides multi-format itinerary export through an RFC 5545 compliant iCalendar (.ics) generator for calendar syncing and a dedicated multi-page PrintDossier component with print media stylesheets.",
+      "evidence": [
+        {
+          "resource": "repo://frontend/src/components/PrintDossier.jsx#L4-L56",
+          "version": "repo-lines-v1:sha256:933821494c877bb421b1de6951781a6ea89c5c69d52e84219f9cc82ae9654992:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmNWRiYzkxNjg0NDdkNTQyNGMyN2ZkMGNjOGZjZTUxMzM5N2JkYTE2Y2VjNzI0ZDUzOGFmZTk5MDgwNDc2NjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI1ZmUyNGM4YzBlNTFkYjZhOTg0MWU1YzJlOGJlNWJiZGQ3OTE0YmIxM2JiMzZlZTQ1ZWQ2ZjYxMDM0NGNjMWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhNmUyMmFiN2RiODBlNGQyMDNhNjJiNGVjNTRmNzdkMjM0NWY5OGRlNWNlMThmNDQyYTE1ZTgxN2Q4ZGJiYmQifQ"
+        },
+        {
+          "resource": "repo://frontend/src/index.css#L280-L337",
+          "version": "repo-lines-v1:sha256:aa9012600bad3224af15a95908635618bebf8fce8936a3c436979934b842ada7:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5ZDM1MjM5ZmE0NWY3YTE0YzZjZThlY2ZhNmY0NjdkMjAyYmNkNWQxNTM2ODA2YWYzYjMyYWZmMGFmMTMyNjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhMDdiZTIzYWM3ZWM3MzE2OTNiOTFhNjc5ZGVjZmQwNTY5MDg0ZjgxMjgxNGU2MTVmMDVlNGI0MjM5ZWQzZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkOGYzYTVjODU3NjcwNDBmMDFhNmZhYzZjNDA3N2JiNDU0ODMzNGQwMTdhMDU5NDE4ZDE2NDc4Mzg3ODgzNmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://frontend/src/utils/calendarExport.js#L1-L45",
+          "version": "repo-lines-v1:sha256:fefce62cce06552ad1914b9b80bb45bf6e7fbd1e01f6bede2bf1e5d6aeb92dc1:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkOGU5NmYyNGY4Njg1YmRjYjY5MDliY2VmZDA3NzIwODRmYzNkZjZiNDQ0NDFhYTZiNmZhMjRkZjkwNmQ4YjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3OTQzYTE0OGUxYzM2ZGZmYTMzNzNhNzJlMTk4ODJkMDA0MTk1NWQxYmEzNjliZmE0ODAwNmMyNTM2ZmQwYTQifQ"
         }
       ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T08:47:15.875Z"
+    "at": "2026-10-22T12:41:14.815Z"
   }
 }

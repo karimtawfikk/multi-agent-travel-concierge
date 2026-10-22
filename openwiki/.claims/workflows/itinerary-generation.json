@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:90d278a5e3b33afc6a08d316b93855aa53f83190734d1929fbe05b7f8a6e7104",
+  "pageVersion": "sha256:a9fb0d45749caab86d384d297f9b0ea5916e98cb9279cc96b4c99063dad7b40e",
   "claims": [
     {
       "id": "claim_8c51a5b430a4474a98c8d5213e98e44a",
       "statement": "The server normalizes departure and return dates via resolve_trip_dates and matches destinations to local currencies via get_destination_currency before kicking off the crew.",
       "evidence": [
         {
-          "resource": "repo://src/server.py#L92-L120",
+          "resource": "repo://src/server.py#L93-L121",
           "version": "repo-lines-v1:sha256:1b80054667048bd0c410b0e6c5e6e3956360e81bddda6560bc9446a915037fd5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNmZlODU1NzhmMzg1NTMzYzdkMWJjZWU1MGVmNzJiNzliNzQ5YTg3MzIyOGJmYjBlNTY1OWJkZTJmNTEwNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1N2Q4MzExMDk2ZTMxYjg2OTY2M2RhMTBhZWIzZTgyY2YzNDc2N2QwYTEzNGE5MDZmZjc0MTdiNTE4ZGRkN2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzNzliMjY0OWM1N2NkNzNiYjQ4Y2VmODA2N2QzNGI2ZTA1NWViYjUyMjc4ODU0ZmQyOGVlODZlZWU4NzNlOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4ODc5MTMyNDg2YzZlMWE5YTg0YjU5M2M1MWM3OWFiNjU5NzY3NTUwYzczZmExOTgyYmNjNTdmNWE1NjJiNzgifQ"
         }
       ]
@@ -17,7 +17,7 @@
       "statement": "The plan_trip_stream endpoint intercepts crewai_event_bus events to stream real-time agent execution and tool usage steps over Server-Sent Events using a thread-safe queue.",
       "evidence": [
         {
-          "resource": "repo://src/server.py#L384-L450",
+          "resource": "repo://src/server.py#L385-L451",
           "version": "repo-lines-v1:sha256:37bc645582e41279da24d11e00355af1807d687d8ff33c61c53b441f6169f224:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZWMwYjFjZGRhMjBlZDUyMTVjODZiZjA0Y2Y1OGEzYzVmZjlkMThlNmVmODA2MGM0NzEyNWE0ZjEwMmRmNDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlMWZlZGU3MzhiZGE4ZTEzMTRjOGI3ODdkMmRmMDRhZDM4NjIwYjNlNGNjY2Q5ZmNiOGQzZGQ5MWMwODdjMjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgyYTQwMjZlYjljZjllZmU1MTA0OWU2NDFjOTJiNmQzY2NiYThmNzczOTdiODAyM2NlMGU4NmZhZmQxNzY0MjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFiNmYwODY4OGJiZWI0ZDgwNDgzOGU5NjM3MmVjMDdlNmNhYjAxZTM1Zjg0MjU2N2NkOTIwMzdmNWRiNjljMmIifQ"
         }
       ]
@@ -31,10 +31,20 @@
           "version": "repo-lines-v1:sha256:111f093565cfcd9ff64a13f6376a01d94cad2c0dd774f3f498cf7eab9597e623:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3MDQwMGIzNGE1NDVkYTNjNjNhYzFlODE2YzVhYzViMDg4MTY5MDEwMWZkMTVjOTBjNzgyMzllNTgxNDJjYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3YjUxNjBlMzI0MmNhY2NlY2U5YjFhYjkzOThkYTBmZTIxNTlhNDFlMTBiNDkwOTBmNWIwMTMwOTUwOTExYzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiMzNkMTUyNTc4NzViZTc5OWVjYWY4Njk0ZGQ4ODU3MjgwNmE3M2E3ZTBmYjY0OWQwMzczNTIxMGUzMTJlNDQifQ"
         }
       ]
+    },
+    {
+      "id": "claim_e45b7c332bc84d0d831dcf1946f3c2cb",
+      "statement": "The server exposes an export endpoint /api/export-ics that serializes a CompleteTripItinerary into an RFC 5545 compliant iCalendar (.ics) attachment with flight, lodging, activity, and dining events.",
+      "evidence": [
+        {
+          "resource": "repo://src/server.py#L836-L992",
+          "version": "repo-lines-v1:sha256:7f341c07a807354d01c7a22044c531f1e922a2f982f70c52d13394467661eed7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMGEzYzdiZjU3ZmZiNWQ1ZWRlNjdmMTE0MWUzOWYyNjlhNGQ3YzdiZDk3ZjY2ZWI2YjBhODdhN2IyNDU4NGEyIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3ZWI3MDI1NzU5M2RhMDZmNjgyYTNkZGRhNTRhOWQyNjBkNGZjNTE0ZjY0NTIzN2Y1Y2E3NGIwOGY4ZGE2MWE2IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4Yjk3NGRhNDA4NjMyYTRhYTdlMmFlODBiODYwMzkxYTNkY2Q4MjExYzc5ZWNhZDdjYThlOTUxMjhiMDAxODMyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1NzQxZWQ0YTk3N2I1NTExMzAzMWMwZmM1ODE0ZDlmYzA2MDc4MjQwNTE1MmYwMjQzNTE4ZWUzZTZmMTk3ZDY0In0"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T08:47:15.875Z"
+    "at": "2026-10-22T12:41:14.815Z"
   }
 }
